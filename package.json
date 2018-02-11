@@ -68,7 +68,9 @@
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.4",
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react-dom": "^15.2.1",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"
