@@ -65,6 +65,7 @@
     "connect": "^3.6.5",
     "json-loader": "^0.5.4",
     "leaflet": "^0.7.7",
+    "mongodb": "^3.0.2",
     "mongoose": "^5.0.4",
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
