@@ -67,6 +67,7 @@
     "leaflet": "^0.7.7",
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.4",
+    "opn": "4.0.2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "webpack": "1.13.1",
