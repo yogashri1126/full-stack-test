@@ -37,7 +37,9 @@ https://react-leaflet.js.org/docs/en/components.html#maplayer
 Research:
 
 csvimport- initially imported file to Robo3T for local mongoDb database. Also includes MERN stack rough work
+
 leafletjs- all the components from documentation
+
 react-leaflet-demo- Map demo of Brooklyn's subway lines and respective coordinates plotted from geoJSON
 
 
