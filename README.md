@@ -28,8 +28,13 @@ Also, configured this database with the final Heroku application (created these 
 
 3.	See github for folder structure and react components in src file to develop the map and see converted csv file to geoJSON for plotting. Used the React leaflet map demo as a reference point, but still working on rendering map onto the page
 Extra folder to show previous iterations of this folder structure (see research folder)
+
+Sources:
+
 https://medium.com/@bryantheastronaut/react-getting-started-the-mern-stack-tutorial-feat-es6-de1a2886be50
+
 Credits for Map.js App. Js, Index.js, Scripts folder, config folder, and index.css: https://github.com/clhenrick/React-Leaflet-demo 
+
 Credits for map components for future rendering:
 https://react-leaflet.js.org/docs/en/components.html#maplayer
 
