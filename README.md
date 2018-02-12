@@ -1,4 +1,4 @@
-﻿#CODING TEST#
+﻿**CODING TEST**
 1.	There is sample well data attached. Load the data into your favorite database (Mongo preferred).
 2.	Build a server with your favorite language (Node preferred) to communicate directly with the database and client (REST expected).
 3.	Build a React front-end with the following:
@@ -8,14 +8,14 @@
 7.	Host your site on Heroku
 8.	Share your github repository
 ____________________________________________________________________________________________________________________________________
-#HOW TO RUN THIS APP#
+**HOW TO RUN THIS APP**
 
 1. npm init package.json
 2. npm install all node packages in root directory
 2. npm start
 ____________________________________________________________________________________________________________________________________
 
-#PROGRESS (look at word document for screen shot images)#
+**PROGRESS (look at word document for screen shot images)**
 
 Heroku site: https://dashboard.heroku.com/apps/sheltered-eyrie-85796
 
@@ -53,7 +53,7 @@ react-leaflet-demo- Map demo of Brooklyn's subway lines and respective coordinat
 
 https://www.npmjs.com/package/react-csv-to-table
 
-TECHNOLOGIES USED: 
+**TECHNOLOGIES USED:**
 
 MERN stack, 
 React-leafletJS, 
