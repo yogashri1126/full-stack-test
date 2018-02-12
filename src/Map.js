@@ -140,14 +140,14 @@ class Map extends Component {
     this.state.map.fitBounds(target.getBounds(), fitBoundsParams);
   }
 
-  filterFeatures(feature, layer) {
-    // filter the subway entrances based on the map's current search filter
-    // returns true only if the filter value matches the value of feature.properties.LINE
-    //const test = feature.properties.LINE.split('-').indexOf(this.state.subwayLinesFilter);
-    if (this.state.subwayLinesFilter === '*' || test !== -1) {
-      return true;
-    }
-  }
+  // filterFeatures(feature, layer) {
+  //   // filter the subway entrances based on the map's current search filter
+  //   // returns true only if the filter value matches the value of feature.properties.LINE
+  //   //const test = feature.properties.LINE.split('-').indexOf(this.state.subwayLinesFilter);
+  //   if (this.state.subwayLinesFilter === '*' || test !== -1) {
+  //     return true;
+  //   }
+  // }
 
   pointToLayer(feature, latlng) {
     // renders our GeoJSON points as circle markers, rather than Leaflet's default image markers
@@ -166,12 +166,12 @@ class Map extends Component {
     return L.circleMarker(latlng, markerParams);
   }
 
-  onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.NAME && feature.properties.LINE) {
+ // onEachFeature(feature, layer) {
+    //if (feature.properties && feature.properties.NAME && feature.properties.LINE) {
 
       // if the array for unique subway line names has not been made, create it
       // there are 19 unique names total
-      if (subwayLineNames.length < 19) {
+     // if (subwayLineNames.length < 19) {
 
         // add subway line name if it doesn't yet exist in the array
         // feature.properties.LINE.split('-').forEach(function(line, index){
@@ -179,13 +179,13 @@ class Map extends Component {
         // });
 
         // on the last GeoJSON feature
-        if (this.state.geojson.features.indexOf(feature) === this.state.numEntrances - 1) {
+       // if (this.state.geojson.features.indexOf(feature) === this.state.numEntrances - 1) {
           // use sort() to put our values in alphanumeric order
           //subwayLineNames.sort();
           // finally add a value to represent all of the subway lines
           //subwayLineNames.unshift('All lines');
-        }
-      }
+     //   }
+     // }
 
       // assemble the HTML for the markers' popups (Leaflet's bindPopup method doesn't accept React JSX)
       // const popupContent = `<h3>${feature.properties.NAME}</h3>
@@ -193,8 +193,8 @@ class Map extends Component {
 
       // // add our popups
       // layer.bindPopup(popupContent);
-    }
-  }
+   // }
+  //}
 
   init(id) {
     if (this.state.map) return;
