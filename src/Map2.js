@@ -41,11 +41,10 @@ type Viewport = {
       // Initialize the viewport to the one provided in props
       super(props)
       this.state = {
-        viewport: props.viewport,
-      }
+        viewport: props.viewport
     }
   
-    componentWillReceiveProps({ viewport }: Props) {
+    componentWillReceiveProps= ( viewport : Props) => {
       // When the provided viewport changes, apply it
       if (viewport !== this.props.viewport) {
         this.setState({ viewport })
@@ -61,10 +60,8 @@ type Viewport = {
       // The viewport got changed by the user, keep track in state
       this.setState({ viewport })
     }
-
-
     
-      componentDidMount() {
+      componentDidMount= ()=> {
         // code to run just after the component "mounts" / DOM elements are created
         // we could make an AJAX request for the GeoJSON data here if it wasn't stored locally
         this.getData();
@@ -72,7 +69,7 @@ type Viewport = {
         if (!this.state.map) this.init(this._mapNode);
       }
     
-      componentDidUpdate(prevProps, prevState) {
+      componentDidUpdate= (prevProps, prevState)  =>{
         // code to run when the component receives new props or state
         // check to see if geojson is stored, map is created, and geojson overlay needs to be added
         if (this.state.geojson && this.state.map && !this.state.geojsonLayer) {
@@ -82,13 +79,13 @@ type Viewport = {
     
       }
     
-      componentWillUnmount() {
+      componentWillUnmount= ()=> {
         // code to run just before unmounting the component
         // this destroys the Leaflet map object & related event listeners
         this.state.map.remove();
       }
     
-      addGeoJSONLayer(geojson) {
+      addGeoJSONLayer= (geojson)=> {
         // create a native Leaflet GeoJSON SVG Layer to add as an interactive overlay to the map
         // an options object is passed to define functions for customizing the layer
         const geojsonLayer = L.geoJson(geojson, {
@@ -104,7 +101,7 @@ type Viewport = {
         this.zoomToFeature(geojsonLayer);
       }
     
-      filterGeoJSONLayer() {
+      filterGeoJSONLayer= () => {
         // clear the geojson layer of its data
         this.state.geojsonLayer.clearLayers();
         // re-add the geojson so that it filters out subway lines which do not match state.filter
@@ -113,7 +110,7 @@ type Viewport = {
         this.zoomToFeature(this.state.geojsonLayer);
       }
     
-      zoomToFeature(target) {
+      zoomToFeature= (target)=> {
         // pad fitBounds() so features aren't hidden under the Filter UI element
         var fitBoundsParams = {
           paddingTopLeft: [200,10],
@@ -123,7 +120,7 @@ type Viewport = {
         this.state.map.fitBounds(target.getBounds(), fitBoundsParams);
       }
     
-      filterFeatures(feature, layer) {
+      filterFeatures= (feature, layer) => {
         // filter the subway entrances based on the map's current search filter
         // returns true only if the filter value matches the value of feature.properties.LINE
         const test = feature.properties.LINE.split('-').indexOf(this.state.subwayLinesFilter);
@@ -132,7 +129,7 @@ type Viewport = {
         }
       }
     
-      pointToLayer(feature, latlng) {
+      pointToLayer= (feature, latlng)=> {
         // renders our GeoJSON points as circle markers, rather than Leaflet's default image markers
         // parameters to style the GeoJSON markers
         var markerParams = {
@@ -147,7 +144,7 @@ type Viewport = {
         return L.circleMarker(latlng, markerParams);
       }
     
-      onEachFeature(feature, layer) {
+      onEachFeature= (feature, layer)=> {
         if (feature.properties && feature.properties.NAME && feature.properties.LINE) {
     
           // if the array for unique subway line names has not been made, create it
@@ -177,7 +174,7 @@ type Viewport = {
         }
       }
     
-      init(id) {
+      init= (id)=> {
         if (this.state.map) return;
         // this function creates the Leaflet map object and is called after the Map component mounts
         let map = L.map(id, config.params);
@@ -191,7 +188,7 @@ type Viewport = {
         this.setState({ map, tileLayer });
       }
   
-    render() {
+    render= () =>{
       return (
         <Map
           onClick={this.onClickReset}
@@ -202,6 +199,7 @@ type Viewport = {
       )
     }
   }
+}
 
 
 
@@ -230,12 +228,7 @@ type Viewport = {
 //       subwayLinesFilter: '*',
 //       numEntrances: null
 //     };
-//     this._mapNode = null;
-//     this.updateMap = this.updateMap.bind(this);
-//     this.onEachFeature = this.onEachFeature.bind(this);
-//     this.pointToLayer = this.pointToLayer.bind(this);
-//     this.filterFeatures = this.filterFeatures.bind(this);
-//     this.filterGeoJSONLayer = this.filterGeoJSONLayer.bind(this);
+
 //   }
 
 //   getData() {
