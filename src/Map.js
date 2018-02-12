@@ -15,8 +15,8 @@ config.params = {
   center: [31.9973, -102.0779],
   zoomControl: false,
   zoom: 13,
-  maxZoom: 19,
-  minZoom: 11,
+  maxZoom: 50,
+  minZoom: 10,
   scrollwheel: false,
   legends: true,
   infoControl: false,
@@ -48,11 +48,11 @@ class Map extends Component {
       numEntrances: null
     };
     this._mapNode = null;
-    this.updateMap = this.updateMap.bind(this);
-    this.onEachFeature = this.onEachFeature.bind(this);
+   // this.updateMap = this.updateMap.bind(this);
+    //this.onEachFeature = this.onEachFeature.bind(this);
     this.pointToLayer = this.pointToLayer.bind(this);
-    this.filterFeatures = this.filterFeatures.bind(this);
-    this.filterGeoJSONLayer = this.filterGeoJSONLayer.bind(this);
+    //this.filterFeatures = this.filterFeatures.bind(this);
+    //this.filterGeoJSONLayer = this.filterGeoJSONLayer.bind(this);
   }
 
   componentDidMount() {
@@ -143,7 +143,7 @@ class Map extends Component {
   filterFeatures(feature, layer) {
     // filter the subway entrances based on the map's current search filter
     // returns true only if the filter value matches the value of feature.properties.LINE
-    const test = feature.properties.LINE.split('-').indexOf(this.state.subwayLinesFilter);
+    //const test = feature.properties.LINE.split('-').indexOf(this.state.subwayLinesFilter);
     if (this.state.subwayLinesFilter === '*' || test !== -1) {
       return true;
     }
@@ -174,25 +174,25 @@ class Map extends Component {
       if (subwayLineNames.length < 19) {
 
         // add subway line name if it doesn't yet exist in the array
-        feature.properties.LINE.split('-').forEach(function(line, index){
-          if (subwayLineNames.indexOf(line) === -1) subwayLineNames.push(line);
-        });
+        // feature.properties.LINE.split('-').forEach(function(line, index){
+        //   if (subwayLineNames.indexOf(line) === -1) subwayLineNames.push(line);
+        // });
 
         // on the last GeoJSON feature
         if (this.state.geojson.features.indexOf(feature) === this.state.numEntrances - 1) {
           // use sort() to put our values in alphanumeric order
-          subwayLineNames.sort();
+          //subwayLineNames.sort();
           // finally add a value to represent all of the subway lines
-          subwayLineNames.unshift('All lines');
+          //subwayLineNames.unshift('All lines');
         }
       }
 
       // assemble the HTML for the markers' popups (Leaflet's bindPopup method doesn't accept React JSX)
-      const popupContent = `<h3>${feature.properties.NAME}</h3>
-        <strong>Access to MTA lines: </strong>${feature.properties.LINE}`;
+      // const popupContent = `<h3>${feature.properties.NAME}</h3>
+      //   <strong>Access to MTA lines: </strong>${feature.properties.LINE}`;
 
-      // add our popups
-      layer.bindPopup(popupContent);
+      // // add our popups
+      // layer.bindPopup(popupContent);
     }
   }
 
