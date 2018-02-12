@@ -13,6 +13,7 @@ ________________________________________________________________________________
 1. npm init package.json
 2. npm install all node packages in root directory
 2. npm start
+____________________________________________________________________________________________________________________________________
 
 #PROGRESS (look at word document for screen shot images)#
 
