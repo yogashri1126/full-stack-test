@@ -10007,6 +10007,7 @@ id, uwi, long, lat, lease, operator, fake_number
 <CsvToHtmlTable
 data={data}
 csvDelimiter=","
+tableClassName="table table-striped table-hover"
 />
 
 export default data
