@@ -5,14 +5,11 @@
 <br>
 3.	Build a React front-end with the following:
       a. A React component containing a Leaflet map, which visualizes the well locations.
-      <br>
       
-      b. Please plot the latitude and longitude. Size the markers by the performance metric (here it’s fake_number). Add a hover-box      which lists the UWI and Operator name.
-      
-      <br>
+      b. Please plot the latitude and longitude. Size the markers by the performance metric (here it’s fake_number). Add a hover-box      which lists the UWI and Operator name.   
+
       c. A React component with a list of all UWIs and their associated lease, operator, and fake_number.
       
-      <br>
 4.	Host your site on Heroku
 5.	Share your github repository
 ____________________________________________________________________________________________________________________________________
