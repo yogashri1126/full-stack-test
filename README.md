@@ -8,7 +8,7 @@
 7.	Host your site on Heroku
 8.	Share your github repository
 ____________________________________________________________________________________________________________________________________
-<h1>HOW TO RUN THIS APP**</h1>
+<h1>HOW TO RUN THIS APP</h1>
 
 1. npm init package.json
 2. npm install all node packages in root directory
