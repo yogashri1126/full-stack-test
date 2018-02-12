@@ -20,7 +20,7 @@ http://docs.mlab.com/migrating/
 Also, configured this database with the final Heroku application (created these two separately)
 
 
-2.	Npm start is the server built for having the application to show up on the webpage
+2.	Npm start is the server built for having the application to show up on the webpage (start.js although in package.json, main= server.js)
 
 3.	See github for folder structure and react components in src file to develop the map and see converted csv file to geoJSON for plotting. Used the React leaflet map demo as a reference point, but still working on rendering map onto the page
 Extra folder to show previous iterations of this folder structure (see research folder)
