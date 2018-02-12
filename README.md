@@ -55,9 +55,9 @@ https://www.npmjs.com/package/react-csv-to-table
 
 TECHNOLOGIES USED: 
 
-MERN stack
-React-leafletJS
-Heroku/mLab
+MERN stack, 
+React-leafletJS, 
+Heroku/mLab, 
 (see package.json for all node modules used)
 
 
