@@ -35,7 +35,7 @@ Also, configured this database with the final Heroku application (created these 
 
 2.	Npm start is the server built for having the application to show up on the webpage (start.js although in package.json, main= server.js)
 
-3a. &3b.	See github for folder structure and react components in src file to develop the map and see converted csv file to geoJSON for plotting. Used the React leaflet map demo as a reference point, but still working on rendering map onto the page
+3a. &3b.	See github for folder structure and react components in src file to develop the map and see converted csv file to geoJSON for plotting. Used the React leaflet map demo as a reference point, and I was able to render the map and well locations. However, I am still working on making like a bubble map and size based on the marker size. I would have to redo geoJSON to include fake_number and attribute that as markersize. This would need more digging in the leafletJS documentation
 Extra folder to show previous iterations of this folder structure (see research folder)
 
 **Sources:**
