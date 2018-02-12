@@ -44,7 +44,9 @@ https://stackoverflow.com/questions/44566340/show-a-component-on-hover-in-reactj
 
 https://github.com/FormidableLabs/radium/issues/524
 
-I also understand at this current deployment, mLab imported CSV data is not called on for the well data and showing the data. That would involve another component to connect to remote database, export as a JSON in the same directory as src file, and then undergo csv-to-table npm package methods. Then I could continue the same process of rendering on to the page using react-router. I could also interact with mLab as well by exporting the database back to csv and then calling a csv-to-geoJSON npm package to export the output file I already manually created in the src folder.
+I also understand at this current deployment, mLab imported CSV data is not called on for the well data and showing the data. The only connection front has to back is the production mongoDB configuration variable I set with the existing mLab I have outside of the final heroku deployment I showed on the site. That would involve another component to connect to remote database, export as a JSON in the same directory as src file, and then undergo csv-to-table npm package methods. Then I could continue the same process of rendering on to the page using react-router. I could also interact with mLab as well by exporting the database back to csv and then calling a csv-to-geoJSON npm package to export the output file I already manually created in the src folder.
+
+I am also aware I do not protect myself from database authentication, as db username/password is somewhere in this folder structure when connecting to the remote database.
 
 https://www.npmjs.com/package/csv-2-geo-json
 
