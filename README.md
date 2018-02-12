@@ -7,6 +7,7 @@
 6.	A React component with a list of all UWIs and their associated lease, operator, and fake_number.
 7.	Host your site on Heroku
 8.	Share your github repository
+____________________________________________________________________________________________________________________________________
 #PROGRESS
 1.	Step one completed for importing into MongoDB
 
