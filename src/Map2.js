@@ -13,8 +13,8 @@ import geojson from 'json!./well_locations_with_data.geojson';
 type Viewport = {
     center: [31.7955, 94.1791],
     zoom: 20,
-    maxZoom: 19,
-    minZoom: 11,
+    maxZoom: 50,
+    minZoom: 10,
     scrollwheel: false,
     legends: true,
     infoControl: false,

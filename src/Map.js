@@ -5,12 +5,14 @@ import 'leaflet/dist/leaflet.css';
 // using webpack json loader we can import our geojson file like this
 import geojson from 'json!./well_locations_with_data.geojson';
 // import local components Filter and ForkMe
+//import Filter from './Filter';
+//import ForkMe from './ForkMe';
 
 // store the map configuration properties in an object,
 // we could also move this to a separate file & import it if desired.
 let config = {};
 config.params = {
-  center: [40.655769,-73.938503],
+  center: [31.7955, -94.1791],
   zoomControl: false,
   zoom: 13,
   maxZoom: 19,
@@ -69,6 +71,11 @@ class Map extends Component {
       this.addGeoJSONLayer(this.state.geojson);
     }
 
+    // check to see if the subway lines filter has changed
+    if (this.state.subwayLinesFilter !== prevState.subwayLinesFilter) {
+      // filter / re-render the geojson overlay
+      this.filterGeoJSONLayer();
+    }
   }
 
   componentWillUnmount() {
@@ -83,6 +90,18 @@ class Map extends Component {
     this.setState({
       numEntrances: geojson.features.length,
       geojson
+    });
+  }
+
+  updateMap(e) {
+    let subwayLine = e.target.value;
+    // change the subway line filter
+    if (subwayLine === "All lines") {
+      subwayLine = "*";
+    }
+    // update our state with the new filter value
+    this.setState({
+      subwayLinesFilter: subwayLine
     });
   }
 
@@ -189,6 +208,19 @@ class Map extends Component {
     this.setState({ map, tileLayer });
   }
 
+  render() {
+    const { subwayLinesFilter } = this.state;
+    return (
+      <div id="mapUI">
+        {
+          /* render the Filter component only after the subwayLines array has been created */
+        
+        }
+        <div ref={(node) => this._mapNode = node} id="map" />
+       
+      </div>
+    );
+  }
 }
 
 export default Map;

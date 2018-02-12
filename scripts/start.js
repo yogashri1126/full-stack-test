@@ -1,7 +1,7 @@
 process.env.NODE_ENV = 'development';
 
 var path = require('path');
-//var chalk = require('chalk');
+var chalk = require('chalk');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var execSync = require('child_process').execSync;

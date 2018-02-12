@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map2';
+import Map from './Map';
 import {data} from './Table'
 
 // App component
