@@ -1,0 +1,23 @@
+var app = require('express')();
+var fileUpload = require('express-fileupload');
+var mongoose = require('mongoose');
+ 
+var server = require('http').Server(app);
+ 
+app.use(fileUpload());
+ 
+server.listen(80);
+ 
+mongoose.connect('mongodb://localhost/csvimport');
+ 
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+ 
+var template = require('./template.js');
+app.get('/template', template.get);
+ 
+var upload = require('./upload.js');
+app.post('/', upload.post);
+
+//Reference: https://code.tutsplus.com/articles/bulk-import-a-csv-file-into-mongodb-using-mongoose-with-nodejs--cms-29574
