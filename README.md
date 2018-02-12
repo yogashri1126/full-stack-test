@@ -49,7 +49,16 @@ leafletjs- all the components from documentation
 
 react-leaflet-demo- Map demo of Brooklyn's subway lines and respective coordinates plotted from geoJSON
 
+5. With Table.js, created the React component to render the table of well data. This is using the npm package csv-to-table react
 
+https://www.npmjs.com/package/react-csv-to-table
+
+TECHNOLOGIES USED: 
+
+MERN stack
+React-leafletJS
+Heroku/mLab
+(see package.json for all node modules used)
 
 
 
