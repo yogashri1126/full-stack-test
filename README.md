@@ -20,10 +20,6 @@ http://docs.mlab.com/migrating/
 Also, configured this database with the final Heroku application (created these two separately)
 
 
-
-
-
-
 2.	Npm start is the server built for having the application to show up on the webpage
 
 3.	See github for folder structure and react components in src file to develop the map and see converted csv file to geoJSON for plotting. Used the React leaflet map demo as a reference point, but still working on rendering map onto the page
@@ -37,6 +33,12 @@ Credits for Map.js App. Js, Index.js, Scripts folder, config folder, and index.c
 
 Credits for map components for future rendering:
 https://react-leaflet.js.org/docs/en/components.html#maplayer
+
+Research:
+
+csvimport- initially imported file to Robo3T for local mongoDb database. Also includes MERN stack rough work
+leafletjs- all the components from documentation
+react-leaflet-demo- Map demo of Brooklyn's subway lines and respective coordinates plotted from geoJSON
 
 
 
