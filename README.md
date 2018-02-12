@@ -38,6 +38,16 @@ Also, configured this database with the final Heroku application (created these 
 3a. &3b.	See github for folder structure and react components in src file to develop the map and see converted csv file to geoJSON for plotting. Used the React leaflet map demo as a reference point, and I was able to render the map and well locations. However, I am still working on making like a bubble map and size based on the marker size. I would have to redo geoJSON to include fake_number and attribute that as markersize. This would need more digging in the leafletJS documentation
 Extra folder to show previous iterations of this folder structure (see research folder)
 
+In addition to the map, React hoverbox would be necessary to display well information: https://www.npmjs.com/package/react-hoverbox
+
+https://stackoverflow.com/questions/44566340/show-a-component-on-hover-in-reactjs
+
+https://github.com/FormidableLabs/radium/issues/524
+
+I also understand at this current deployment, mLab imported CSV data is not called on for the well data and showing the data. That would involve another component to connect to remote database, export as a JSON in the same directory as src file, and then undergo csv-to-table npm package methods. Then I could continue the same process of rendering on to the page using react-router. I could also interact with mLab as well by exporting the database back to csv and then calling a csv-to-geoJSON npm package to export the output file I already manually created in the src folder.
+
+https://www.npmjs.com/package/csv-2-geo-json
+
 **Sources:**
 
 https://medium.com/@bryantheastronaut/react-getting-started-the-mern-stack-tutorial-feat-es6-de1a2886be50
@@ -58,6 +68,10 @@ react-leaflet-demo- Map demo of Brooklyn's subway lines and respective coordinat
 3c. With Table.js, created the React component to render the table of well data. This is using the npm package csv-to-table react
 
 https://www.npmjs.com/package/react-csv-to-table
+
+However, I would need to use react-router to show the table in another route: https://reacttraining.com/react-router/web/guides/philosophy
+
+https://www.npmjs.com/package/react-router
 
 <h1>TECHNOLOGIES USED:</h1>
 
