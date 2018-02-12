@@ -8,7 +8,7 @@
 7.	Host your site on Heroku
 8.	Share your github repository
 ____________________________________________________________________________________________________________________________________
-#PROGRESS
+#PROGRESS (look at word document for screen shot images)
 1.	Step one completed for importing into MongoDB
 
 Sources:
