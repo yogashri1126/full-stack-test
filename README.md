@@ -4,6 +4,7 @@
 2.	Build a server with your favorite language (Node preferred) to communicate directly with the database and client (REST expected).
 <br>
 3.	Build a React front-end with the following:
+
       a. A React component containing a Leaflet map, which visualizes the well locations.
       
       b. Please plot the latitude and longitude. Size the markers by the performance metric (here it’s fake_number). Add a hover-box      which lists the UWI and Operator name.   
