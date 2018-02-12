@@ -3,7 +3,7 @@ import L from 'leaflet';
 // postCSS import of Leaflet's CSS
 import 'leaflet/dist/leaflet.css';
 // using webpack json loader we can import our geojson file like this
-import geojson from 'json!./well_locations_with_data.geojson';
+import geojson from 'json!./well_locations_with_data_geo.geojson';
 // import local components Filter and ForkMe
 //import Filter from './Filter';
 //import ForkMe from './ForkMe';
@@ -12,7 +12,7 @@ import geojson from 'json!./well_locations_with_data.geojson';
 // we could also move this to a separate file & import it if desired.
 let config = {};
 config.params = {
-  center: [31.7955, -94.1791],
+  center: [31.9973, -102.0779],
   zoomControl: false,
   zoom: 13,
   maxZoom: 19,
@@ -152,6 +152,8 @@ class Map extends Component {
   pointToLayer(feature, latlng) {
     // renders our GeoJSON points as circle markers, rather than Leaflet's default image markers
     // parameters to style the GeoJSON markers
+    // The issue I have right now with this is that the coordinates in geoJSON are not compatible format with latlng plotting here
+
     var markerParams = {
       radius: 4,
       fillColor: 'orange',
