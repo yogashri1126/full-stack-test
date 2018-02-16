@@ -9,6 +9,19 @@ var opn = require('opn');
 var detect = require('./utils/detectPort');
 var prompt = require('./utils/prompt');
 var config = require('../config/webpack.config.dev');
+var db= require('mongodb')
+var MongoClient = require('mongodb').MongoClient
+var assert = require('assert');
+
+var MONGO_URL = "mongodb://ypradhan:677849Up@ds231568.mlab.com:31568/well_data";
+
+  // Set up the connection to the remote db
+  MongoClient.connect(MONGO_URL, function(err, db) {
+    assert.equal(null, err);
+    console.log("Connected correctly to server");
+  
+    db.close();
+  });
 
 // Tools like Cloud9 rely on this
 var DEFAULT_PORT = process.env.PORT || 3000;
