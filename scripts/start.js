@@ -12,6 +12,9 @@ var config = require('../config/webpack.config.dev');
 var db= require('mongodb')
 var MongoClient = require('mongodb').MongoClient
 var assert = require('assert');
+var express= require('express');
+var app = express();
+var routes= require('../routes/table')
 
 var MONGO_URL = "mongodb://ypradhan:677849Up@ds231568.mlab.com:31568/well_data";
 
@@ -19,10 +22,11 @@ var MONGO_URL = "mongodb://ypradhan:677849Up@ds231568.mlab.com:31568/well_data";
   MongoClient.connect(MONGO_URL, function(err, db) {
     assert.equal(null, err);
     console.log("Connected correctly to server");
-  
+    // db.find({}).forEach(function(f){print(tojson(f,'',true))})
     db.close();
   });
 
+app.use(routes);
 // Tools like Cloud9 rely on this
 var DEFAULT_PORT = process.env.PORT || 3000;
 var compiler;
