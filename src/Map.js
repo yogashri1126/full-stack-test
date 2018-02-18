@@ -49,10 +49,10 @@ class Map extends Component {
     };
     this._mapNode = null;
    // this.updateMap = this.updateMap.bind(this);
-    this.onEachFeature_lease = this.onEachFeature_lease.bind(this);
+    this.onEachFeature = this.onEachFeature.bind(this);
     this.pointToLayer = this.pointToLayer.bind(this);
-    this.onEachFeature_operator = this.onEachFeature_operator.bind(this);
-    this.onEachFeature_uwi = this.onEachFeature_uwi.bind(this);
+    //this.onEachFeature_operator = this.onEachFeature_operator.bind(this);
+    //this.onEachFeature_uwi = this.onEachFeature_uwi.bind(this);
     //this.filterFeatures = this.filterFeatures.bind(this);
     //this.filterGeoJSONLayer = this.filterGeoJSONLayer.bind(this);
   }
@@ -198,11 +198,11 @@ class Map extends Component {
    // }
   //}
 
- onEachFeature_lease(feature, layer) {
+ onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.uwi) {
         //layer.bindPopup(feature.properties.uwi);
-        layer.bindPopup(feature.properties.lease);
+        layer.bindPopup(feature.properties.uwi.toString()+'\n'+'\n'+feature.properties.lease + '\n'+'\n' +feature.properties.operator  );
         //layer.bindPopup(feature.properties.operator);
     }
   }
