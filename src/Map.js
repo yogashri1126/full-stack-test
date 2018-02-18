@@ -3,7 +3,7 @@ import L from 'leaflet';
 // postCSS import of Leaflet's CSS
 import 'leaflet/dist/leaflet.css';
 // using webpack json loader we can import our geojson file like this
-import geojson from 'json!./well_locations_with_data_geo.geojson';
+import geojson from 'json!./well_locations_with_data_2.geojson';
 // import local components Filter and ForkMe
 //import Filter from './Filter';
 //import ForkMe from './ForkMe';
@@ -49,8 +49,10 @@ class Map extends Component {
     };
     this._mapNode = null;
    // this.updateMap = this.updateMap.bind(this);
-    //this.onEachFeature = this.onEachFeature.bind(this);
+    this.onEachFeature_lease = this.onEachFeature_lease.bind(this);
     this.pointToLayer = this.pointToLayer.bind(this);
+    this.onEachFeature_operator = this.onEachFeature_operator.bind(this);
+    this.onEachFeature_uwi = this.onEachFeature_uwi.bind(this);
     //this.filterFeatures = this.filterFeatures.bind(this);
     //this.filterGeoJSONLayer = this.filterGeoJSONLayer.bind(this);
   }
@@ -155,7 +157,7 @@ class Map extends Component {
     // The issue I have right now with this is that the coordinates in geoJSON are not compatible format with latlng plotting here
 
     var markerParams = {
-      radius: 4,
+      radius: feature.properties.fake_number,
       fillColor: 'orange',
       color: '#fff',
       weight: 1,
@@ -195,6 +197,33 @@ class Map extends Component {
       // layer.bindPopup(popupContent);
    // }
   //}
+
+ onEachFeature_lease(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.uwi) {
+        //layer.bindPopup(feature.properties.uwi);
+        layer.bindPopup(feature.properties.lease);
+        //layer.bindPopup(feature.properties.operator);
+    }
+  }
+
+  onEachFeature_operator(feature, layer) {
+      // does this feature have a property named popupContent?
+      if (feature.properties && feature.properties.uwi) {
+          //layer.bindPopup(feature.properties.uwi);
+          //layer.bindPopup(feature.properties.lease);
+          layer.bindPopup(feature.properties.operator);
+      }
+    }
+  onEachFeature_uwi(feature, layer) {
+        // does this feature have a property named popupContent?
+        if (feature.properties && feature.properties.uwi) {
+            layer.bindPopup(feature.properties.uwi);
+            //layer.bindPopup(feature.properties.lease);
+            //layer.bindPopup(feature.properties.operator);
+        }
+      } 
+
 
   init(id) {
     if (this.state.map) return;
