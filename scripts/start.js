@@ -26,7 +26,7 @@ var MONGO_URL = "mongodb://ypradhan:677849Up@ds231568.mlab.com:31568/well_data";
     db.close();
   });
 
-app.use(routes);
+//app.use(routes);
 // Tools like Cloud9 rely on this
 var DEFAULT_PORT = process.env.PORT || 3000;
 var compiler;
