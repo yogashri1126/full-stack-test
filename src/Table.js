@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
 import { CsvToHtmlTable } from 'react-csv-to-table';
 
 const data =` 
@@ -10004,11 +10005,13 @@ id, uwi, long, lat, lease, operator, fake_number
 4.2E+13,4.2E+13,-99.4108333,28.4427778,RITCHIE FARMS,EP ENERGY E&P COMPANY LP,14
 4.2E+13,4.2E+13,-99.4105556,28.4427778,RITCHIE FARMS,EP ENERGY E&P COMPANY LP,95` ;
 
+// ReactDOM.render(
 <CsvToHtmlTable
 data={data}
 csvDelimiter=","
 tableClassName="table table-striped table-hover"
 />
+// , document.getElementById('root'))
 
-export default data
+//export default Table
 
