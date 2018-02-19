@@ -19,7 +19,7 @@ ________________________________________________________________________________
 1. npm init package.json
 2. npm install all node packages in root directory
 3. npm start
-4. To render well table. Go to src/Table and uncomment "ReactDom.Render..."
+4. To render well table, route /table. Scroll down to see the well data (background page is default black from home page)
 ____________________________________________________________________________________________________________________________________
 
 <h1>PROGRESS (look at word document for screen shot images)</h1>
