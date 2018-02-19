@@ -20,10 +20,10 @@ ________________________________________________________________________________
 2. npm install all node packages in root directory
 3. npm start
 4. To render well table, route /table. Scroll down to see the well data (background page is default black from home page)
-5. To get well information on the map, click on the markers. You'll see uwi, lease name, and operator. You will also notice the markers are sized differently based on a selected metric
+5. To get well information on the map, click on the markers. You'll see uwi, lease name, and operator. You will also notice the markers are sized differently based on a selected metric (fake_number)
 ____________________________________________________________________________________________________________________________________
 
-<h1>PROGRESS (look at word document for screen shot images)</h1>
+<h1>PROGRESS</h1>
 
 Heroku site: https://dashboard.heroku.com/apps/sheltered-eyrie-85796
 
@@ -44,7 +44,7 @@ Extra folder to show previous iterations of this folder structure (see research 
 
 https://github.com/FormidableLabs/radium/issues/524
 
-I also understand at this current deployment, mLab imported CSV data is not called on for the well data and showing the data. The only connection front has to back is the production mongoDB configuration variable I set with the existing mLab I have outside of the final heroku deployment I showed on the site. That would involve another component to connect to remote database, export as a JSON in the same directory as src file, and then undergo csv-to-table npm package methods. Then I could continue the same process of rendering on to the page using react-router. I could also interact with mLab as well by exporting the database back to csv and then calling a csv-to-geoJSON npm package to export the output file I already manually created in the src folder.
+I also understand at this current deployment, mLab imported CSV data is not called on for the well data and showing the data. The only connection front has to back is the production mongoDB configuration variable I set with the existing mLab I have outside of the final heroku deployment I showed on the site. That would involve another component to connect to remote database, export as a JSON in the same directory as src file, and then undergo csv-to-table npm package methods. Then I could continue the same process of rendering on to the page using react-router. I could also interact with mLab as well by exporting the database back to csv and then calling a csv-to-geoJSON npm package to export the output file I already manually created in the src folder. As of now, I've successfully connected to existing mLab if one looks at start.js & respective mongoBD npm packages.
 
 I am also aware I do not protect myself from database authentication, as db username/password is somewhere in this folder structure when connecting to the remote database.
 
@@ -67,7 +67,7 @@ http://bl.ocks.org/mpmckenna8/9395643
 
 csvimport- initially imported file to Robo3T for local mongoDb database. Also includes MERN stack rough work
 
-leafletjs- all the components from documentation
+leafletjs (1-3)- all the components from documentation
 
 react-leaflet-demo- Map demo of Brooklyn's subway lines and respective coordinates plotted from geoJSON
 
