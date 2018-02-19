@@ -18,7 +18,8 @@ ________________________________________________________________________________
 
 1. npm init package.json
 2. npm install all node packages in root directory
-2. npm start
+3. npm start
+4. To render well table. Go to src/Table and uncomment "ReactDom.Render..."
 ____________________________________________________________________________________________________________________________________
 
 <h1>PROGRESS (look at word document for screen shot images)</h1>
