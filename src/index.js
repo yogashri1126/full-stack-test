@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter,Route,Router, browserHistory, HashRouter, hashHistory, Switch} from 'react-router-dom';
 import App from './App.js';
 import './index.css'; // postCSS import of CSS module
-import data from './Table'
+//import data from './Table'
 import tableRender from './tableRender'
 
 ReactDOM.render((

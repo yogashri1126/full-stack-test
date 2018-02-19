@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { CsvToHtmlTable } from 'react-csv-to-table';
 
 const data =` 
@@ -10009,6 +10009,7 @@ data={data}
 csvDelimiter=","
 tableClassName="table table-striped table-hover"
 />
+
 
 export default data
 

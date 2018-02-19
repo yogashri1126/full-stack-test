@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react'
 import data from './Table.js'
 
-export default React.createClass({
+class tableRender extends Component{
   render() {
     return data
   }
-})
+}
+
+export default tableRender
