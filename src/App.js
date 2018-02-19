@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter,Route, Match, Switch, Miss } from 'react-router';
 import Map from './Map';
-import {data} from './Table'
+//import data from './Table';
 
 // App component
 class App extends Component {
