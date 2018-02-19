@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import data from './Table.js'
+import {data} from './Table.js'
 
 class tableRender extends Component{
   render() {

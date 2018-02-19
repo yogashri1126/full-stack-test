@@ -8,12 +8,13 @@ import './index.css'; // postCSS import of CSS module
 import tableRender from './tableRender'
 
 ReactDOM.render((
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
     <Route path="/" component={App}/>
     <Route path="/table" component={tableRender}/>
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 
 ), document.getElementById('root'));
 
+console.log(tableRender)
