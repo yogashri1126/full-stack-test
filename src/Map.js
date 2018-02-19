@@ -14,7 +14,7 @@ let config = {};
 config.params = {
   center: [31.9973, -102.0779],
   zoomControl: false,
-  zoom: 13,
+  zoom: 15,
   maxZoom: 50,
   minZoom: 10,
   scrollwheel: false,
